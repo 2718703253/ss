@@ -1,0 +1,43 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
+public class M3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = 3;
+        while (num-- > 0) {
+            System.out.println("请输入你的用户名：");
+            String name = scanner.nextLine();
+            System.out.println("请输入你的密码：");
+            String key = scanner.nextLine();
+            if (name.compareTo("luoxiang") == 0 && key.compareTo("2233") == 0) {
+                System.out.println("恭喜你登录成功！！！");
+                M4();
+                break;
+            } else {
+                System.out.println("输入错误！您还有" + num + "次机会！");
+            }
+        }
+
+        if (num == 0) {
+            System.out.println("对不起，您3次均输入错误！");
+        }
+    }
+
+    public static void M4() {
+       Scanner scanner= new Scanner(System.in);
+       int num3=0,num4=0;
+       for (int i=1;i<11;i++){
+           System.out.println("请输入第"+i+"位顾客的年龄：");
+           int a=scanner.nextInt();
+           if (a>=30){
+               num3++;
+           }else{
+               num4++;
+           }
+
+       }
+        System.out.println("30岁以下的比例为："+num4*10+"%");
+        System.out.println("30岁以上的比例为："+num3*10+"%");
+    }
+}
