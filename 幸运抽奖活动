@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class M1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入4位数卡号");
+        int num1 = scanner.nextInt();
+        int a = num1/1000;//千位
+        int b = num1%1000/100;//百位
+        int c = num1%100/10;//十位
+        int d = num1%10;//个位
+        int num2 = a+b+c+d;
+        System.out.println("会员卡号"+num1+"各位之和为："+num2);
+        if(num2>20){
+            System.out.println("是幸运用户吗？：true");
+        }else{
+            System.out.println("是幸运用户吗？：no");
+        }
+    }
+}
