@@ -4,9 +4,8 @@ public class M8 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入你的成绩：");
-        int scort = scanner.nextInt();
-        int a = scort/60;
-        switch (a){
+        Double scort = scanner.nextDouble();
+        switch ((int)(scort/60)){
             case 1:
                 System.out.println("合格");
                 break;
@@ -15,3 +14,4 @@ public class M8 {
                 break;
         }
     }
+}
