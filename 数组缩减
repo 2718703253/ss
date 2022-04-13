@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class M15 {
+    public static void main(String[] args) {
+        int[] arr ={1, 2, 3, 4, 5} ;
+        int a = 1;
+//        int[] arr1 = new int[arr.length - a];
+
+        do {
+
+            int[] arr1 = new int[arr.length - a];
+
+            Scanner myscanner = new Scanner(System.in);
+            System.out.println("是否要进行缩减：y/n");
+            char key = myscanner.next().charAt(0);
+            if (key == 'n'){
+                System.out.println("结束");
+                break;
+            }
+            for (int i = 0; i < arr1.length; i++) {
+                arr1[i] = arr[i];
+            }
+
+            for (int j = 0;j < arr1.length;j++){
+                System.out.print(arr1[j] +"\t");
+            }
+            a++;
+            if (a == arr.length){
+                System.out.println("缩减到达极限");
+                break;
+            }
+
+        }while (true);
+
+
+//            for (int j = 0;j < arr1.length;j++){
+//                System.out.print(arr1[j] +"\t");
+//            }
+        }
+
+    }
